@@ -83,9 +83,7 @@ class MathCaptchaComponent extends Object {
             $this->variables[] = rand($this->settings['minNumber'], $this->settings['maxNumber']);
         }
         
-       // debug($this->settings); debug($this->variables);
         $this->equation = implode(' ' . $this->settings['operand'] . ' ', $this->variables);
-        //debug($this->equation); 
         // This function determines the answer to the equation and stores it as a session variable.
         $this->registerAnswer();
 
