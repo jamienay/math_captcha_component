@@ -1,0 +1,5 @@
+I don’t like CAPTCHAs. I don’t know anyone who does. But most forms need some sort of protection against spam, especially where heavyweight spam detection services (e.g. Akismet) aren’t suitable. The downfalls of CAPTCHAs are many – hard to read, annoying, impossible for those with vision difficulties – and the benefits are slim. So, a few months ago I wrote a little function (and I do mean little – like 10 lines of code) to generate a random math question to ask the user in plain text instead of a CAPTCHA. The idea was that a bot wouldn’t be able to answer it, since it requires some human logic. And you know what? It worked – spam went way down on our websites.
+
+So, fast forward a few months and now I’m writing a CakePHP CMS, and I’ve decided to turn my ‘math captcha’ function into a Component. So here it is: my Math Captcha Component. This component generates a random equation and registers the answer as a session variable. The programmer can then check the form submitter’s answer against that registered answer using the validation function provided in the component.
+For more information:
+http://jamienay.com/2009/06/math-captcha-component/
